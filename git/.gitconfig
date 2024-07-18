@@ -1,0 +1,10 @@
+[user]
+	name = mgrru
+	email = ru@fufu.moe
+	signingkey = /home/ru/.ssh/id_ed25519.pub
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh

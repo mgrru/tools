@@ -31,6 +31,7 @@ alias pacS='pacman -S --needed'
 alias pacRnsu='pacman -Rnsu'
 # 清理依赖包 sudo
 alias pacSc='pacman -Sc'
+alias pacScc='pacman -Scc'
 # 查找孤立包
 alias pacQdt='pacman -Qdt'
 # 查找不被依赖的包
