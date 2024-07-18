@@ -1,1 +1,1 @@
-
+/home/ru/.bashrc
