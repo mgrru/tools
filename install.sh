@@ -1,25 +1,28 @@
 #!/bin/bash
 
 os_name=$(uname)
-file_name_arr=(".bashrc")
-bash_file_path=""
+# 默认安装在home目录
+# bash_file_path=".bashrc" ".bash_profile"
+# git_file_path=".gitconfig"
+rust_file_path=".cargo"
+# ssh_file_path=".ssh"
+nvim_file_path=".config"
+home_path=""
 
 if [ $os_name = "Linux" ]
 then
 	cd
-	bash_file_path=$(pwd)
+	home_path=$(pwd)
+	cd -
 else
-  echo "当前非Linux,可能出现问题！继续需要手动删除exit 1"
+  echo "当前非Linux,可能出现问题!继续需要手动删除exit 1并设置home_path"
   exit 1
 fi
 
-i=0
-while(( $i<${#file_name_arr[*]} ))
-do
-	cd -
-  cur_dir=$(pwd)
-  cp $cur_dir/bash/${file_name_arr[$i]} $bash_file_path
-	i=$i+1
-done
+cp -Rf bash/.* $home_path
+cp -Rf git/.* $home_path
+cp -Rf rust/*.* $home_path/$rust_file_path
+cp -Rf ssh/.* $home_path
+cp -Rf nvim $home_path/$nvim_file_path
 
 echo "复制成功!"

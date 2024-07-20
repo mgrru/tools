@@ -21,7 +21,7 @@ i=0
 while(( $i<${#bash_file_arr[*]} ))
 do
 	mkdir -p bash
-	cp -r $home_path/${bash_file_arr[$i]} bash
+	cp -Rf $home_path/${bash_file_arr[$i]} bash
 
 	i=$i+1
 done
@@ -30,7 +30,7 @@ i=0
 while(( $i<${#git_file_arr[*]} ))
 do
   mkdir -p git
-	cp -r $home_path/${git_file_arr[$i]} git
+	cp -Rf $home_path/${git_file_arr[$i]} git
 
 	i=$i+1
 done
@@ -39,7 +39,7 @@ i=0
 while(( $i<${#rust_file_arr[*]} ))
 do
   mkdir -p rust
-	cp -r $home_path/${rust_file_arr[$i]} rust
+	cp -Rf $home_path/${rust_file_arr[$i]} rust
 	i=$i+1
 done
 
@@ -47,7 +47,7 @@ i=0
 while(( $i<${#ssh_file_arr[*]} ))
 do
   mkdir -p ssh
-	cp -r $home_path/${ssh_file_arr[$i]} ssh
+	cp -Rf $home_path/${ssh_file_arr[$i]} ssh
 
 	i=$i+1
 done
@@ -56,7 +56,7 @@ i=0
 while(( $i<${#nvim_file_arr[*]} ))
 do
   mkdir -p nvim
-	cp -r $home_path/${nvim_file_arr[$i]}/* nvim
+	cp -Rf $home_path/${nvim_file_arr[$i]}/* nvim
 
 	i=$i+1
 done
