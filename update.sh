@@ -2,7 +2,7 @@
 
 os_name=$(uname)
 # 默认是在home目录下的文件
-bash_file_arr=(".bashrc")
+bash_file_arr=(".bashrc" ".bash_profile")
 git_file_arr=(".gitconfig")
 rust_file_arr=(".cargo/config.toml")
 ssh_file_arr=(".ssh")
@@ -13,26 +13,52 @@ if [ $os_name = "Linux" ]
 then
 	cd
 	home_path=$(pwd)
+
+	cd -
 fi
 
 i=0
 while(( $i<${#bash_file_arr[*]} ))
 do
-	cd -
-
-  mkdir -p bash
+	mkdir -p bash
 	cp -r $home_path/${bash_file_arr[$i]} bash
+
+	i=$i+1
+done
+
+i=0
+while(( $i<${#git_file_arr[*]} ))
+do
   mkdir -p git
 	cp -r $home_path/${git_file_arr[$i]} git
-  mkdir -p rust 
+
+	i=$i+1
+done
+
+i=0
+while(( $i<${#rust_file_arr[*]} ))
+do
+  mkdir -p rust
 	cp -r $home_path/${rust_file_arr[$i]} rust
-  mkdir -p ssh 
+	i=$i+1
+done
+
+i=0
+while(( $i<${#ssh_file_arr[*]} ))
+do
+  mkdir -p ssh
 	cp -r $home_path/${ssh_file_arr[$i]} ssh
+
+	i=$i+1
+done
+
+i=0
+while(( $i<${#nvim_file_arr[*]} ))
+do
   mkdir -p nvim
 	cp -r $home_path/${nvim_file_arr[$i]}/* nvim
 
 	i=$i+1
 done
-
 
 echo "复制成功!"
