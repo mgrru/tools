@@ -11,7 +11,7 @@ export EDITOR='nvim'
 export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 # 打开终端配色
-export CLICOLOR=1
+export CLICOLOR=256
 export LSCOLORS=ExGxFxdaCxDaDahbadech
 
 alias sudo='sudo '
@@ -75,12 +75,15 @@ DEFAULT=$PS1
 clear_color="\e[0m"
 # 设置打印皮肤
 get_os_name() {
-  os_name=$(lsb_release -ds)
+  os_name=$(uname -a)
   left_str="\e[0m\e[34;40;1m "
   right_str=" \e[0m"$clear_color
   if [[ $os_name =~ "Arch" ]]
   then
     echo $left_str" "$right_str
+  elif [[ $os_name =~ "WSL" ]]
+  then
+    echo $left_str" "$right_str
   elif [[ $os_name =~ "Windows" ]]
   then
     echo $left_str" "$right_str

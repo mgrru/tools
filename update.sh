@@ -5,7 +5,7 @@ os_name=$(uname)
 bash_file_arr=(".bashrc" ".bash_profile")
 git_file_arr=(".gitconfig")
 rust_file_arr=(".cargo/config.toml")
-ssh_file_arr=(".ssh")
+# ssh_file_arr=(".ssh")
 nvim_file_arr=(".config/nvim")
 home_path=""
 
@@ -38,19 +38,19 @@ done
 i=0
 while(( $i<${#rust_file_arr[*]} ))
 do
-  mkdir -p rust
-	cp -Rf $home_path/${rust_file_arr[$i]} rust
-	i=$i+1
+mkdir -p rust
+cp -Rf $home_path/${rust_file_arr[$i]} rust
+i=$i+1
 done
 
-i=0
-while(( $i<${#ssh_file_arr[*]} ))
-do
-  mkdir -p ssh
-	cp -Rf $home_path/${ssh_file_arr[$i]} ssh
+# i=0
+# while(( $i<${#ssh_file_arr[*]} ))
+# do
+#   mkdir -p ssh
+# 	cp -Rf $home_path/${ssh_file_arr[$i]} ssh
 
-	i=$i+1
-done
+# 	i=$i+1
+# done
 
 i=0
 while(( $i<${#nvim_file_arr[*]} ))

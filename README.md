@@ -8,6 +8,5 @@
 ## list
 - bash 
 - git
-- ssh
 - neovim
 - rust
