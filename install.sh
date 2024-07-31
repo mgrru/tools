@@ -21,8 +21,9 @@ fi
 
 cp -Rf bash/.* $home_path
 cp -Rf git/.* $home_path
+mkdir -p $home_path/$rust_file_path
 cp -Rf rust/*.* $home_path/$rust_file_path
-cp -Rf ssh/.* $home_path
+# cp -Rf ssh/.* $home_path
 cp -Rf nvim $home_path/$nvim_file_path
 
 echo "复制成功!"
