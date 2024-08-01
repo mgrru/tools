@@ -22,6 +22,9 @@ alias la='ls -aF'
 alias ll='ls -laF'
 alias grep='grep --color=auto'
 
+alias vim='nvim'
+alias vi='nvim'
+
 # 更新软件包和系统 sudo
 alias pacSyu='pacman -Syu'
 # 强制更新 sudo
@@ -116,4 +119,4 @@ get_user_name() {
   echo $left_str$user_str$at_str$hostname_str$right_str
 }
 
-PROMPT_COMMAND='PS1="$(get_os_name)$(get_user_name)$(get_git_branch)$(get_workspace) \e[37;2m=> 󰅒 \t =>  \s:\v$clear_color\n "'
+PROMPT_COMMAND='PS1="$(get_os_name)$(get_user_name)$(get_git_branch)$(get_workspace) \e[37;2m=> 󰅒 \t =>  \s:\v$clear_color\n"'
