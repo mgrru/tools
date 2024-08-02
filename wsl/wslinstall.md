@@ -12,7 +12,7 @@ wsl --install --no-distribution
 wsl --set-default-version 2
 ```
 
-## 设置.wslconfig 删除
+## 设置.wslconfig
 ```.wslconfig
 # Settings apply across all Linux distros running on WSL 2
 [wsl2]
