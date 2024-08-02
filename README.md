@@ -6,7 +6,8 @@
 - update.sh 将配置文件加载到项目中
 
 ## list
-- bash 
+- bash
 - git
 - neovim
 - rust
+- wsl
