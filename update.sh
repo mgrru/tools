@@ -38,9 +38,9 @@ done
 i=0
 while(( $i<${#rust_file_arr[*]} ))
 do
-mkdir -p rust
-cp -Rf $home_path/${rust_file_arr[$i]} rust
-i=$i+1
+	mkdir -p rust
+	cp -Rf $home_path/${rust_file_arr[$i]} rust
+	i=$i+1
 done
 
 # i=0

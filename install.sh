@@ -11,9 +11,9 @@ home_path=""
 
 if [ $os_name = "Linux" ]
 then
-	cd
-	home_path=$(pwd)
-	cd -
+  cd
+  home_path=$(pwd)
+  cd -
 else
   echo "当前非Linux,可能出现问题!继续需要手动删除exit 1并设置home_path"
   exit 1
