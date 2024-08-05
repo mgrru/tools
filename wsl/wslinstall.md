@@ -27,7 +27,7 @@ processors=2
 swap=2GB
 
 # Turn on default connection to bind WSL 2 localhost to Windows localhost
-# localhostforwarding=true
+localhostforwarding=true
 
 ipv6=true
 # mirrored模式可能会导致win中安装的sql客户端连接不到wsl中的容器里的mysql
